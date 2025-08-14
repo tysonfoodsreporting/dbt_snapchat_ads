@@ -36,7 +36,7 @@ with campaign_daily as (
 
     select
         campaign_daily.source_relation,
-        campaign_daily.date_day,
+        cast(campaign_daily.date_day as date) as date_day, 
         campaign_daily.campaign_id,
         campaigns.campaign_name,
         campaign_daily.region,
