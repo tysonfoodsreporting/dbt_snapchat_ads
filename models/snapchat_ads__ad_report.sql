@@ -67,7 +67,7 @@ with ad_hourly as (
         round(sum(ad_hourly.spend),2) as spend,
         sum(ad_hourly.total_conversions) as total_conversions,
         round(cast(sum(ad_hourly.conversion_purchases_value) as {{ dbt.type_numeric() }}), 2) as conversion_purchases_value,
-        sum(ad_hourly.video_views) as video_plays,
+        sum(ad_hourly.impressions) as video_plays,
         sum(ad_hourly.video_views) as video_views,
  
 
